@@ -10,8 +10,8 @@ And Xp=X0, Yp=Y0
 Step: 01
 Calculate ΔX, ΔY and M from the given input.
 These parameters are calculated as-
-ΔX = Xn – X0
-ΔY =Yn – Y0
+ΔX = Xn – X0;
+ΔY =Yn – Y0;
 M = ΔY / ΔX
 
 Step:02
