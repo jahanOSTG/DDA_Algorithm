@@ -46,5 +46,5 @@ Case:03: If  M>1
  
 Keep repeating Step-03 until the end point is reached or the number of generated new points (including the starting and ending points) equals to the steps count.
 
-Output and for information [click here](https://drive.google.com/file/d/1Vxy67tbutN8DEAt4zfXhYIgaWw942O-R/view?usp=sharing))
+Output and for information [click here](https://drive.google.com/file/d/1Vxy67tbutN8DEAt4zfXhYIgaWw942O-R/view?usp=sharing)
 
