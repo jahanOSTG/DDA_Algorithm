@@ -1,50 +1,74 @@
-# DDA algorithm: 
-Digital Differential Analyzer algorithm.
-DDA algorithm is the simplest line drawing algorithm.Here given that the starting and ending coordinates of a line.
-Algorithm: 
+# DDA Algorithm (Digital Differential Analyzer)
 
-Given- <br>
-Starting coordinates = (X0, Y0)
-Ending coordinates = (Xn, Yn)<br>
-And Xp=X0, Yp=Y0
+The **Digital Differential Analyzer (DDA)** algorithm is one of the simplest line-drawing algorithms. Given the starting and ending coordinates of a line, DDA can efficiently compute the intermediate points to draw the line.
 
-### <u>Step: 01</u>
-Calculate ΔX, ΔY and M from the given input.
-These parameters are calculated as-<br>
-ΔX = Xn – X0;<br>
-ΔY =Yn – Y0;<br>
-M = ΔY / ΔX
+## Algorithm Overview
 
-### Step:02
-Find the number of steps or points in between the starting and ending coordinates.
-if (absolute (ΔX) > absolute (ΔY))<br>
-Steps = absolute (ΔX);<br>
-else<br>
-Steps = absolute (ΔY);
+### Given:
+- Starting coordinates: `(X0, Y0)`
+- Ending coordinates: `(Xn, Yn)`
+- Initial values: `Xp = X0`, `Yp = Y0`
 
-### Step: 03:
-Suppose the current point is (Xp, Yp) and the next point is (Xp+1, Yp+1).
-Find the next point by following the below three cases-
+---
 
-Case:01: If  M<1<br>
+### Step 1: Calculate ΔX, ΔY, and M
 
-•	Xp+1=round off (1+Xp)<br>
-•	Yp+1=round off (M+Yp)
+These parameters are calculated based on the starting and ending coordinates:
+- `ΔX = Xn - X0`
+- `ΔY = Yn - Y0`
+- `M = ΔY / ΔX` (slope of the line)
 
-Case:02: If  M=1<br>
+---
 
-•	Xp+1=round off (1+Xp)<br>
-•	Yp+1=round off (1+Yp)
+### Step 2: Determine the Number of Steps
 
-Case:03: If  M>1
+The number of steps or points to be calculated is determined by the following condition:
+- If `|ΔX| > |ΔY|`: 
+  - `Steps = |ΔX|`
+- Else:
+  - `Steps = |ΔY|`
 
-•	Xp+1=round off (1/M+Xp)
-•	Yp+1=round off (1+Yp)
+---
+
+### Step 3: Calculate Next Points
+
+Suppose the current point is `(Xp, Yp)`, and the next point is `(Xp+1, Yp+1)`. The following cases apply:
+
+#### Case 1: If `M < 1`
+- `Xp+1 = round(Xp + 1)`
+- `Yp+1 = round(M + Yp)`
+
+#### Case 2: If `M = 1`
+- `Xp+1 = round(Xp + 1)`
+- `Yp+1 = round(Yp + 1)`
+
+#### Case 3: If `M > 1`
+- `Xp+1 = round(Xp + 1/M)`
+- `Yp+1 = round(Yp + 1)`
+
+---
+
+### Step 4: Repeat Until the End Point is Reached
+
+Keep calculating the next point (Xp+1, Yp+1) until:
+- The end point `(Xn, Yn)` is reached, or
+- The number of generated points (including the start and end points) equals the calculated `Steps`.
+
+---
+
+## DDA Visualization:
+
+Here is a visual representation of how the DDA algorithm works:
+
+<img src="DDA.png" width="400" height="300" alt="DDA">
+
+---
+
+## Documentation:
+
+For a more detailed explanation of the DDA algorithm, check out the full documentation:
+
+[Click here for Documentation](https://drive.google.com/file/d/1Vxy67tbutN8DEAt4zfXhYIgaWw942O-R/view?usp=sharing)
 
 
-### Step-04:
- 
-Keep repeating Step-03 until the end point is reached or the number of generated new points (including the starting and ending points) equals to the steps count.
-
-Output and more information [click here](https://drive.google.com/file/d/1Vxy67tbutN8DEAt4zfXhYIgaWw942O-R/view?usp=sharing)
 
